@@ -13,8 +13,8 @@ InputParameters validParams<LittlegrassApp>()
 LittlegrassApp::LittlegrassApp(const std::string & name, InputParameters parameters) :
     MooseApp(name, parameters)
 {
-  srand(libMesh::processor_id());
-  
+  srand(processor_id());
+
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
   LittlegrassApp::registerObjects(_factory);
