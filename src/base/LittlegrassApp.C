@@ -28,6 +28,7 @@ LittlegrassApp::~LittlegrassApp()
 {
 }
 
+extern "C" void LittlegrassApp__registerApps() { LittlegrassApp::registerApps(); }
 void
 LittlegrassApp::registerApps()
 {
