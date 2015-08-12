@@ -10,10 +10,9 @@ InputParameters validParams<LittlegrassApp>()
   return params;
 }
 
-LittlegrassApp::LittlegrassApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+LittlegrassApp::LittlegrassApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);

@@ -11,7 +11,7 @@ InputParameters validParams<LittlegrassApp>();
 class LittlegrassApp : public MooseApp
 {
 public:
-  LittlegrassApp(const std::string & name, InputParameters parameters);
+  LittlegrassApp(InputParameters parameters);
   virtual ~LittlegrassApp();
 
   static void registerApps();
